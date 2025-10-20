@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ngày Phụ Nữ Việt Nam - 20 Tháng 10</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+    <body>
+        <div class="flower-decoration" id="flowerContainer"></div>
+
+        <nav
+            class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm"
+        >
+            <div
+                class="container mx-auto px-4 py-3 flex justify-between items-center"
+            >
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-heart text-pink-400"></i>
+                    <span class="text-xl font-semibold text-gray-800"
+                        >20/10</span
+                    >
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a
+                        href="#home"
+                        class="text-gray-600 hover:text-pink-500 transition"
+                        >Trang Chủ</a
+                    >
+                    <a
+                        href="#tribute"
+                        class="text-gray-600 hover:text-pink-500 transition"
+                        >Tôn Vinh</a
+                    >
+                    <a
+                        href="#gallery"
+                        class="text-gray-600 hover:text-pink-500 transition"
+                        >Bộ Sưu Tập</a
+                    >
+                    <a
+                        href="#messages"
+                        class="text-gray-600 hover:text-pink-500 transition"
+                        >Lời Chúc</a
+                    >
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <section
+            id="home"
+            class="hero-bg min-h-screen flex items-center justify-center relative pt-16"
+        >
+            <div class="container mx-auto px-4 text-center z-10">
+                <div class="hero-content">
+                    <h1
+                        class="playfair text-5xl md:text-7xl font-bold mb-6 gradient-text"
+                    >
+                        Chúc Mừng Ngày Phụ Nữ Việt Nam
+                    </h1>
+                    <div class="text-6xl md:text-8xl mb-8">💐</div>
+                    <h2
+                        class="text-3xl md:text-5xl font-semibold text-pink-500 mb-6"
+                    >
+                        20/10
+                    </h2>
+                    <p
+                        class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10"
+                    >
+                        Gửi đến tất cả những người phụ nữ tuyệt vời, những người
+                        làm cho cuộc sống của chúng ta tươi sáng, mạnh mẽ và đẹp
+                        đẽ hơn. Hôm nay, chúng ta tôn vinh bạn - sức mạnh, sự
+                        duyên dáng và tình yêu vô tận của bạn.
+                    </p>
+                    <button
+                        id="sendLoveBtn"
+                        class="btn-love px-8 py-4 rounded-full text-white font-semibold text-lg"
+                    >
+                        <i class="fas fa-heart mr-2"></i> Gửi Lời Yêu Thương
+                    </button>
+
+                    <div
+                        id="hiddenMessage"
+                        class="hidden-message mt-8 max-w-md mx-auto"
+                    >
+                        <div class="message-card p-6 rounded-2xl">
+                            <p class="text-lg text-gray-700">
+                                <i
+                                    class="fas fa-quote-left text-pink-400 mr-2"
+                                ></i>
+                                Bạn đặc biệt, bạn được yêu thương, và bạn làm
+                                cho thế giới trở nên tốt đẹp hơn chỉ bằng sự
+                                hiện diện của mình.
+                                <i
+                                    class="fas fa-quote-right text-pink-400 ml-2"
+                                ></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-elements"></div>
+        </section>
+
+        <section id="tribute" class="py-20 px-4">
+            <div class="container mx-auto">
+                <h2
+                    class="section-title playfair text-4xl md:text-5xl font-bold text-center mb-16"
+                >
+                    Tôn Vinh Phụ Nữ Việt Nam
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="card-hover bg-white p-8 rounded-2xl shadow-lg text-center"
+                    >
+                        <div class="text-5xl mb-4">💪</div>
+                        <h3 class="text-2xl font-semibold mb-3 text-pink-500">
+                            Sức Mạnh
+                        </h3>
+                        <p class="text-gray-600">
+                            Phụ nữ Việt Nam là hiện thân của sự kiên cường và
+                            sức mạnh, đối mặt với thử thách bằng sự duyên dáng
+                            và quyết tâm.
+                        </p>
+                    </div>
+
+                    <div
+                        class="card-hover bg-white p-8 rounded-2xl shadow-lg text-center"
+                    >
+                        <div class="text-5xl mb-4">🌸</div>
+                        <h3 class="text-2xl font-semibold mb-3 text-pink-500">
+                            Duyên Dáng
+                        </h3>
+                        <p class="text-gray-600">
+                            Với sự thanh lịch và duyên dáng, phụ nữ Việt Nam gìn
+                            giữ truyền thống đồng thời đón nhận hiện đại.
+                        </p>
+                    </div>
+
+                    <div
+                        class="card-hover bg-white p-8 rounded-2xl shadow-lg text-center"
+                    >
+                        <div class="text-5xl mb-4">❤️</div>
+                        <h3 class="text-2xl font-semibold mb-3 text-pink-500">
+                            Tình Yêu
+                        </h3>
+                        <p class="text-gray-600">
+                            Tình yêu và sự chăm sóc vô bờ bến của họ tạo nên sự
+                            ấm áp trong gia đình và cộng đồng trên khắp Việt
+                            Nam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-20 px-4 bg-white/50">
+            <div class="container mx-auto">
+                <h2
+                    class="section-title playfair text-4xl md:text-5xl font-bold text-center mb-16"
+                >
+                    Lịch Sử Ngày Phụ Nữ Việt Nam
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="gallery-item">
+                        <img
+                            src="https://cand.com.vn/Files/Image/thanhbinh/2020/01/20/eab955b3-4d93-4419-adab-1551091a17b9.jpg"
+                            alt="Hai Bà Trưng khởi nghĩa"
+                            class="w-full h-64 object-cover"
+                        />
+                        <div class="gallery-overlay">
+                            <p class="text-white font-semibold">
+                                Hai Bà Trưng (Năm 40–43): Biểu tượng đầu tiên
+                                của tinh thần nữ quyền Việt Nam, khởi nghĩa
+                                chống lại ách đô hộ phương Bắc.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://vietartview.com.vn/wp-content/uploads/2024/03/ava-Ba-Trieu.png"
+                            alt="Bà Triệu khởi nghĩa"
+                            class="w-full h-64 object-cover"
+                        />
+                        <div class="gallery-overlay">
+                            <p class="text-white font-semibold">
+                                Bà Triệu (Năm 248): “Tôi muốn cưỡi cơn gió mạnh,
+                                đạp luồng sóng dữ…” – biểu tượng khí phách kiên
+                                cường của người phụ nữ Việt.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/7/78/Female_Vietcong_Guerrilla.jpg"
+                            alt="Phụ nữ trong kháng chiến"
+                            class="w-full h-64 object-cover"
+                        />
+                        <div class="gallery-overlay">
+                            <p class="text-white font-semibold">
+                                Thời kỳ kháng chiến chống Pháp và Mỹ: Phụ nữ
+                                Việt Nam “giỏi việc nước, đảm việc nhà”, góp
+                                công lớn vào độc lập dân tộc.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://file.vnua.edu.vn/data/19/images/2021/09/29/congdoan/2-968.jpg"
+                            alt="Hội Liên hiệp Phụ nữ thành lập"
+                            class="w-full h-64 object-cover"
+                        />
+                        <div class="gallery-overlay">
+                            <p class="text-white font-semibold">
+                                Năm 1930: Thành lập Hội Liên hiệp Phụ nữ Việt
+                                Nam – tổ chức đại diện, bảo vệ quyền lợi và
+                                tiếng nói của phụ nữ cả nước.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://vlstudies.com/wp-content/uploads/2024/10/vna_potal_ky_niem_89_nam_ngay_phu_nu_viet_nam_20101930_%E2%80%93_20102019_phat_huy_truyen_thong_phu_nu_viet_nam_anh_hung_bat_khuat_trung_hau__105827936_stand.jpg"
+                            alt="Ngày 20/10 chính thức"
+                            class="w-full h-64 object-cover"
+                        />
+                        <div class="gallery-overlay">
+                            <p class="text-white font-semibold">
+                                Năm 1930: Ngày 20/10 được chọn là Ngày Phụ Nữ
+                                Việt Nam – ghi nhận vai trò và đóng góp của phụ
+                                nữ trong mọi lĩnh vực.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="https://media.vneconomy.vn/w800/images/upload/2024/10/09/xh120241009143621-5047270.jpg"
+                            alt="Phụ nữ Việt Nam hiện đại"
+                            class="w-full h-64 object-cover"
+                        />
+                        <div class="gallery-overlay">
+                            <p class="text-white font-semibold">
+                                Thế kỷ 21: Phụ nữ Việt Nam tiếp tục tỏa sáng
+                                trong xã hội hiện đại – năng động, tự tin, sáng
+                                tạo và hội nhập toàn cầu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="messages" class="py-20 px-4">
+            <div class="container mx-auto max-w-4xl">
+                <h2
+                    class="section-title playfair text-4xl md:text-5xl font-bold text-center mb-16"
+                >
+                    Những Lời Chúc Tri Ân
+                </h2>
+
+                <div class="space-y-6">
+                    <div class="message-card p-6 rounded-2xl float-animation">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-3xl">🌹</div>
+                            <div>
+                                <h3
+                                    class="text-xl font-semibold text-pink-500 mb-2"
+                                >
+                                    Gửi Mẹ Của Chúng Con
+                                </h3>
+                                <p class="text-gray-700">
+                                    Cảm ơn Mẹ vì những hy sinh vô tận, sự ủng hộ
+                                    kiên định và tình yêu đã định hình cuộc đời
+                                    chúng con. Mẹ là người thầy đầu tiên và là
+                                    người hùng mãi mãi của chúng con.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="message-card p-6 rounded-2xl float-animation"
+                        style="animation-delay: 1s"
+                    >
+                        <div class="flex items-start space-x-4">
+                            <div class="text-3xl">💐</div>
+                            <div>
+                                <h3
+                                    class="text-xl font-semibold text-pink-500 mb-2"
+                                >
+                                    Gửi Chị Em Gái Của Chúng Tôi
+                                </h3>
+                                <p class="text-gray-700">
+                                    Vì những tiếng cười, sự hỗ trợ và những kỷ
+                                    niệm chung làm cho cuộc sống trở nên tươi
+                                    đẹp. Các bạn là người tâm sự và là những
+                                    người bạn thân nhất của chúng tôi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="message-card p-6 rounded-2xl float-animation"
+                        style="animation-delay: 2s"
+                    >
+                        <div class="flex items-start space-x-4">
+                            <div class="text-3xl">🌺</div>
+                            <div>
+                                <h3
+                                    class="text-xl font-semibold text-pink-500 mb-2"
+                                >
+                                    Gửi Những Người Bạn Đời
+                                </h3>
+                                <p class="text-gray-700">
+                                    Vì đã đồng hành cùng chúng tôi trên hành
+                                    trình cuộc sống, chia sẻ những giấc mơ và
+                                    xây dựng một tương lai chung. Bạn làm trọn
+                                    vẹn thế giới của chúng tôi theo vô số cách.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="message-card p-6 rounded-2xl float-animation"
+                        style="animation-delay: 3s"
+                    >
+                        <div class="flex items-start space-x-4">
+                            <div class="text-3xl">🌷</div>
+                            <div>
+                                <h3
+                                    class="text-xl font-semibold text-pink-500 mb-2"
+                                >
+                                    Gửi Tất Cả Phụ Nữ
+                                </h3>
+                                <p class="text-gray-700">
+                                    Mong các bạn luôn biết giá trị của mình, đón
+                                    nhận sức mạnh của bản thân và tiếp tục
+                                    truyền cảm hứng cho những người xung quanh.
+                                    Hôm nay và mỗi ngày, chúng tôi chúc mừng
+                                    bạn!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gradient-to-r from-pink-100 to-purple-100 py-10 px-4">
+            <div class="container mx-auto text-center">
+                <div class="text-5xl mb-4">💖</div>
+                <h3 class="text-2xl font-semibold text-pink-500 mb-4">
+                    Chúc Mừng Ngày Phụ Nữ Việt Nam!
+                </h3>
+                <p class="text-gray-600 mb-6">
+                    Tôn vinh những người phụ nữ phi thường làm cho Việt Nam tươi
+                    đẹp
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a
+                        href="https://www.facebook.com/nguyen.tu.dung.186523"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition"
+                    >
+                        <i class="fab fa-facebook text-pink-500"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/nguyentudung2k8/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition"
+                    >
+                        <i class="fab fa-instagram text-pink-500"></i>
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@nguyentudung.2k8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition"
+                    >
+                        <i class="fab fa-tiktok text-pink-500"></i>
+                    </a>
+                </div>
+                <p class="text-sm text-gray-500 mt-8">
+                    &copy; 2025 Kỷ Niệm 95 năm Ngày Phụ Nữ Việt Nam. Được làm
+                    bằng tất cả tình yêu, và sự tôn trọng 💕
+                </p>
+            </div>
+        </footer>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
